@@ -45,6 +45,10 @@ This private key is used when the node is acting as a validator in the network a
 
 The private key file is located in `consensus/validator.key`, and adheres to the [key format](/docs/edge/configuration/manage-private-keys#key-format) mentioned.
 
+:::warning
+The validator private key is unique to each validator node. The same key is <b>not</b> to be shared across all validators, as this may compromise the security of your chain.
+:::
+
 ## Networking Private Key
 
 The private key file mentioned for networking is used by libp2p to generate the corresponding PeerID, and allow the node to participate in the network.
