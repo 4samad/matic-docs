@@ -18,6 +18,10 @@ Currently, the Polygon Edge is concerned with keeping 2 major runtime secrets:
 * The **validator private key** used by the node, if the node is a validator
 * The **networking private key** used by libp2p, for participating and communicating with other peers
 
+:::warning
+The validator private key is unique to each validator node. The same key is <b>not</b> to be shared across all validators, as this may compromise the security of your chain.
+:::
+
 For additional information, please read through the [Managing Private Keys Guide](/docs/edge/configuration/manage-private-keys)
 
 The modules of the Polygon Edge **should not need to know how to keep secrets**. Ultimately, a module should not care if 
